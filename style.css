@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background-color: #adb5bd; */
+    font-family: "Share Tech Mono", monospace;
+}
+ul{
+        list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke
+}
+img{
+    width: 100%;
+    height: auto;
+}
+/* utility */
+.flexbox{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+}
+header{
+    /*header height for full image, img- image width 100%, img height auto*/
+    height: 100vh;
+
+    /* set image to bakcground:width:
+     not background-image: */
+    /*  linear-gradient(rgba().rgba()),url()    */
+    background:linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.5)),url(https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* nav-section */
+
+.logo-text h1{
+    /* padding-top: 30px; */
+    color: green;
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.main-nav{
+    padding-top: 30px;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.nav-links ul{
+    column-gap: 20px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.hover-link{
+    color: whitesmoke;
+}
+.hover-link:hover{
+    color: green;
+    transition: 0.3s ease-in-out;
+}
+/* header-content */
+.header-content{
+    /* this is need relative, my brain get slipped here- impotant for me-1*/
+    position: relative;
+    top:100px;
+    left:80px;
+
+    /*set width*/
+    width: 50%;
+
+    color: whitesmoke;
+}
+.header-content h2{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.header-content  p{
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+form{
+    margin: 20px 0;
+}
+
+input{
+    /*input box size rely on that - new learn*/
+    font-size: 1.5rem;
+}
+::placeholder{
+    /* for decoration*/
+    padding-left: 3px;
+}
+
+
+/* input[type="target"] - */
+input[type="text"], input[type="email"]{
+    /*my brain get slipped here- impotant for me-2 */
+    /*set display block*/
+    display: block;
+
+    /* width 50percent of header-container*/
+    width: 50%;
+
+    /*decorations*/
+    margin: 20px 0;
+    padding: 8px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+}
+input[type="submit"]{
+    width: 50%;
+    padding: 8px 0;
+    border: 3px solid green;
+    border-radius: 8px;
+    color: whitesmoke;
+    background-color: green;
+    text-transform: uppercase;
+}
+/*when click pointer to fill- it shows green border around*/
+input:focus {
+    outline: 2px solid green;
+}
+.sumbit:hover{
+    color: green;
+    background-color: whitesmoke;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    transform: scale(1.05);
+}
+/* about  */
+.about1{
+    margin-top: 80px;
+    column-gap: 30px;
+    margin-bottom: 30px;
+    
+}
+.left,.middle,.right{
+    flex-basis: 30%;
+    padding: 20px;
+}
+.left{
+    flex-direction: column;
+    gap: 20px;
+}
+.middle p{
+    text-align: justify;
+}
+.middle{
+   flex-direction: column;
+   gap: 10px;
+}
+
+.right{
+    flex-direction: column;
+    gap: 65px;
+}
+.right p{
+    text-align: justify;
+}
+.btn{
+    background-color: green;
+    padding: 12px;
+    border-radius: 6px;
+} 
+.btn:hover{
+    transition: 0.3s ease-out;
+    color: black;
+    background-color: white;
+}
+/* about2 */
+.about2{
+    background-color: rgb(0, 0, 0);
+    padding: 50px 20px;
+    border-radius: 6px;
+    margin-top: 50px;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.about2-left{
+    flex-basis: 50%;
+    flex-direction: column;
+    gap: 40px;
+}
+.about2-left h3, h2{
+    align-self: flex-start;
+}
+.about2-left p{
+    text-align: justify;
+}
+.about2-right{
+    margin-bottom: 50px;
+    flex-basis: 50%;
+    width: 100%;
+
+}
+.set1, .set2{
+    gap: 20px;
+    flex-wrap: wrap; /* ✅ Cards wrap ho jayenge */
+    justify-content: center;
+}
+.card{
+    flex-basis: 45%; /* ✅ 2 cards side by side */
+    margin-bottom: 20px;
+    flex: 0 1 45%;
+}
+.card img{
+    width: 100%;
+    max-width: 180px;
+}
+
+/* process */
+.p-heading{
+    margin-top: 50px;
+    justify-content: center;
+}
+.process-content{
+    margin-top: 30px;
+}
+.process-bar{
+    margin: auto;
+    width: 86%;
+    height: 2px;
+    background-color: black;
+    /* margin-bottom: 40px; */
+    position: relative;
+
+}
+.process-bar .c1,
+.process-bar .c2,
+.process-bar .c3{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: green;
+    position: absolute;
+}
+.process-bar .c1{
+    top: -8px;
+    left: 10%;
+}
+.process-bar .c2{
+    top: -8px;
+    left: 50%;
+}
+.process-bar .c3{
+    top: -8px;
+    right: 10%;
+}
+.process-step{
+    margin-top: 30px;
+}
+.step1 h4, .step2 h4, .step3 h4{
+    text-align: center;
+    margin-bottom: 8px;
+    color: rgb(0, 15, 0);
+}
+.step1{
+    padding: 0 10px;
+}
+
+.step2{
+    padding: 0 10px;
+}
+
+.step3{
+    padding: 0 10px;
+}
+/* testimony */
+.testimony{
+    margin: 30px auto;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.review2{
+    background-color: aliceblue;
+    padding: 10px 8px;
+}
+.review1{
+    background-color: aliceblue;
+    padding: 10px 8px;
+}
+.review2 img, .review1 img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        padding-bottom: 5px;
+    }
+.review1 p, .review2 p{
+    text-align: justify;
+    
+}
+/* main-footer */
+.main-footer{
+    margin-top: 60px;
+    justify-content: space-between;
+}
+.f1 a, .f2 a{
+    color: black;
+    
+}
+.f1 h4, .f2 h4{
+    margin-bottom: 5px;
+}
+.f2 h4, .f1 h4{
+    text-align: center;
+}
+.sub-footer{
+    background-color: green;
+    margin: 20px 0;
+}
+.sub-footer p{
+    text-align: center;
+    padding: 10px 0;
+
+}
+@media screen and (max-width:768px) {
+    .main-nav{
+        flex-direction: column;
+    }
+    .logo-text{
+        align-self: flex-start;
+        padding-left: 20px;
+    }
+    .nav-links{
+        align-self: flex-start;
+    }
+    .header-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        padding: 20px;
+        top: 50px;
+        
+    }
+    input[type="text"],input[type="email"],input[type="submit"]{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .about1{
+        flex-direction: column;
+    }
+    .left,.middle,.right{
+        flex-basis: 100%;
+    }
+    .set1, .set2{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card{
+        flex-basis: 100%;
+    }
+    .about2-right{
+        margin-bottom: 20px;
+    }
+    .about2{
+        padding: 30px 20px;
+        
+    }
+    .p-heading {
+        justify-content: flex-start;
+        font-size: 1.5rem;
+    }
+    .process-content{
+        display: none;
+    }
+    .process-step{
+        flex-wrap: wrap;
+    }
+    .step1, .step2, .step3{
+        padding: 0 2px;
+        margin: 6px 0;
+    }
+    .step1 h4, .step2 h4, .step3 h4{
+        text-align: left;
+        font-size: 1.4rem;
+    }
+    .step1 p, .step2 p, .step3 p{
+        font-size: 1.2rem;
+        color: green;
+    }
+    .testimony{
+        flex-wrap: wrap;
+    }
+    .review2 img, .review1 img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        padding-bottom: 5px;
+    }
+    .review1, .review2{
+        padding: 50px 10px;
+        color: whitesmoke;
+        background-color: black;
+        border-radius: 6px;
+    }
+}
+
+/* .spacer{
+    height: 100vh;
+} */
